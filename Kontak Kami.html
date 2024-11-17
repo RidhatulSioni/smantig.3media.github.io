@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- swiper css linked hare  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- akar icon cdn linked hare  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/akar-icons-fonts/1.1.22/css/akar-icons.css"
+      integrity="sha512-xM54SoWdWHNrNSYzPt1Wfsg5dyaIk0e7/biNh0jIR+pdaoWLfEAs50ig7ysS0ywbN79lrAow53uHtK3joebijA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>3media Smantig</title>
+  <meta name="title" content="3media">`
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+  <style>
+
+/* contact section starts hare  */
+
+.contact {
+    margin-bottom: 50px;
+}
+
+.contact .contact-option {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.contact .contact-option iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.contact .contact-option h4 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.input-box .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+} 
+
+.contact .contact-option .contanct-details a {
+    flex: 1 0 200px;
+    border: 2px solid var(--primary-clr);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.contact .contact-option .contanct-details a span {
+    background: var(--primary-clr);
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: inherit;
+    margin-right: .5rem;
+    color: var(--white-clr);
+}
+
+.contact .contact-option .contanct-details a:hover {
+    transform: translate(0, -5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.input-box form .box {
+    flex: 1 0 250px;
+}
+
+.input-box form :is(input, textarea, button, select) {
+    width: 100%;
+    height: 45px;
+    border: 2px solid var(--primary-clr);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+}
+
+.input-box form textarea {
+    resize: vertical;
+    height: 20rem;
+}
+
+.input-box form button {
+    margin-top: 2rem;
+    width: 100%;
+    background: var(--primary-clr);
+    color: var(--white-clr);
+    cursor: pointer;
+    border: none;
+}
+
+.input-box form button:hover {
+    background: var(--light-clr);
+    color: #000;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-clr: #2C67EC;
+    --light-clr: #2C67EC;
+    --white-clr: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+::selection {
+    background: var(--primary-clr);
+    color: var(--white-clr);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-clr);
+    border-radius: 6px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+
+section {
+    padding: 0 10rem;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.heading {
+    font-size: 4rem;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+    color: #000000;
+    line-height: 2;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="3media Beranda" class="logo-light">
+
+        <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="3media Beranda" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="3media Smantig">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Beranda</a>
+          </li>
+
+          <li>
+            <a href="Tentang Kami.html" class="navbar-link">Tentang Kami</a>
+          </li>
+
+          <li>
+            <a href="Berita.html" class="navbar-link">Berita</a>
+          </li>
+
+          <li>
+            <a href="http://localhost/webgalerifoto/" class="navbar-link">Dokumentasi</a>
+          </li>
+
+          <li>
+            <a href="Kontak Kami.html" class="navbar-link">Kontak</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:smantig.3media@gmail.com" class="contact-link">3media@gmail.com</a>
+
+          <a href="tel:001234567890" class="contact-link">+62 812 434 863 42</a>
+        </div>
+
+        
+
+      </nav>
+
+      <a href="https://www.youtube.com/@smantig.3media" class="btn btn-primary">SUBSCRIBE</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="Beranda"
+        style="background-image: url(./assets/images/Latar-belakang-3media.jpg)">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Selamat Datang</h1>
+
+            <p class="hero-text">
+              Kami dengan bangga mempersembahkan platform resmi 3MEDIA SMANTIG. Jika Anda memerlukan bantuan atau memiliki pertanyaan, silakan chat di kontak di bawah ini. Kami siap membantu Anda dengan berbagai informasi menarik seputar kegiatan kami. Nikmati pengalaman berharga tersebut dan jangan ragu untuk menghubungi kami kapan saja. Terima kasih telah mengunjungi kami, dan selamat menjelajahi.
+            </p>
+
+            <div class="btn-wrapper">
+
+              <a href="#kontak kami" class="btn btn-primary">Jelajahi Sekarang</a>
+
+            </div>
+
+          </div>
+
+          <div class="hero-slider" data-slider>
+
+            <div class="slider-inner">
+              <ul class="slider-container" data-slider-container>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/Logo 3MEDIA terbaru.jpg" width="575" height="550" alt="Foto Logo 3media" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <div class="hero-card">
+                    <figure class="img-holder" style="--width: 575; --height: 550;">
+                      <img src="./assets/images/Foto Bersama 3MEDIA.jpg" width="575" height="550" alt="Foto Bersamaa"
+                        class="img-cover">
+                    </figure>
+
+                    <button class="play-btn" aria-label="play adex intro">
+                      <ion-icon name="play" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/Logo 3MEDIA terbaru.jpg" width="575" height="550" alt="Foto Logo 3media" class="img-cover">
+                  </figure>
+
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      <!-- contact section starts hare  -->
+
+    <section class="contact mt-100" id="kontak kami">
+      <h1 class="heading">
+          Kontak Kami
+      </h1>
+
+      <div class="contact-option input-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4020.803100204926!2d123.05235577500058!3d0.5506180994439909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32792b6acac75beb%3A0x55cbd3509a520867!2sSMA%20NEGERI%203%20GORONTALO!5e1!3m2!1sen!2sid!4v1726470396254!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div class="contanct-details">
+              <div class="details">
+                  <h4>Detail Kontak</h4>
+
+                  <div class="box-container">
+                      <a href="#">
+                          <span><i class="ai-phone"></i></span>
+                          +6285136276194
+                      </a>
+                      <a href="#">
+                          <span><i class="ai-envelope"></i></span>
+                          smantig.3media@gmail.com    
+                      </a>
+                  </div>
+              </div>
+
+              <form action="#">
+                  <h4>Kontak form</h4>
+                  <div class="box-container">
+                      <div class="box">
+                          <input type="text" placeholder="Nama Depan">
+                      </div>
+                      <div class="box">
+                          <input type="text" placeholder="Nama Belakang">
+                      </div>
+                      <div class="box">
+                          <input type="text" placeholder="Nomor Hp">
+                      </div>
+                      <div class="box">
+                          <input type="email" placeholder="Email Anda">
+                      </div>
+                      <div class="box">
+                          <textarea name="" id="" placeholder="Deskripsi"></textarea>
+                      </div>
+                  </div>
+                  <button>
+                      Kirim Pesan
+                  </button>
+              </form>
+          </div>
+      </div>
+  </section>
+
+  <!-- contact section ends hare  -->
+          
+      </section>
+      </section>
+
+
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Bergabunglah dengan Tim 3Media, tim yang berinovasi dalam dunia komunikasi.
+          </h2>
+
+          <a href="#" class="btn btn-primary">Hubungi Kami</a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="Adex home">
+        </a>
+
+        <p class="footer-text">
+          &copy; 2024 3media Smantig<br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Lokasi Kami</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            SMAN 3 GORONTALO
+          </address>
+        </li>
+
+        <li>
+          <a href="mailto:info@email.com" class="footer-link">smantig.3media@gmail.com</a>
+        </li>
+
+        <li>
+          <a href="tel:001234567890" class="footer-link">+62812434863 42</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Beranda</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Tentang Kami</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Berita</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Belanja</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Kontal</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="h4 footer-list-title">Motivasi</p>
+
+        <p class="footer-text">
+          "Di 3Media, kreativitas adalah kekuatan kita. Bersama, kita menciptakan, berinovasi, dan menginspirasi dunia melalui setiap konten yang kita hasilkan. Mari bergerak maju, menembus batas, dan mencapai puncak baru bersama-sama!"
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- swiper css linked hare  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- akar icon cdn linked hare  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/akar-icons-fonts/1.1.22/css/akar-icons.css"
+      integrity="sha512-xM54SoWdWHNrNSYzPt1Wfsg5dyaIk0e7/biNh0jIR+pdaoWLfEAs50ig7ysS0ywbN79lrAow53uHtK3joebijA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>3media Smantig</title>
+  <meta name="title" content="3media">`
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+  <style>
+    .hero-text {
+      text-align: justify;
+    }
+    .card-text {
+      text-align: justify;
+    }
+    .table-container {
+  max-width: 1310px;
+  margin: auto;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #2C67EC;
+  color: #fff;
+}
+
+thead th {
+  padding: 15px;
+  text-align: center;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: center;
+}
+
+.section-header td {
+  background-color: #2C67EC;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+.highlight {
+  background-color: #2C67EC;
+  color: #fff;
+}
+
+/*-----------------------------------*\
+  #PROJECT
+\*-----------------------------------*/
+
+.project { background-color: var(--cultured); }
+
+.project :is(.section-subtitle, .section-title) { text-align: center; }
+
+.project .section-title { margin-block-end: 50px; }
+
+.project-card {
+  background-color: var(--white);
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+  height: 100%;
+}
+
+.project-card .card-content { padding: 30px; }
+
+.project-card .card-title { transition: var(--transition-1); }
+
+.project-card .card-title:is(:hover, :focus-visible) { color: var(--violet-blue-crayola); }
+
+.project-card .card-text { margin-block: 16px 20px; }
+
+.project-card .card-meta-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-card .card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--cadet-blue-crayola);
+  font-size: var(--fs-8);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="3media Beranda" class="logo-light">
+
+        <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="3media Beranda" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="3media Smantig">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Beranda</a>
+          </li>
+
+          <li>
+            <a href="Tentang Kami.html" class="navbar-link">Tentang Kami</a>
+          </li>
+
+          <li>
+            <a href="Berita.html" class="navbar-link">Berita</a>
+          </li>
+
+          <li>
+            <a href="http://localhost/webgalerifoto/" class="navbar-link">Dokumentasi</a>
+          </li>
+
+          <li>
+            <a href="Kontak Kami.html" class="navbar-link">Kontak</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:smantig.3media@gmail.com" class="contact-link">3media@gmail.com</a>
+
+          <a href="tel:001234567890" class="contact-link">+62 812 434 863 42</a>
+        </div>
+
+        
+
+      </nav>
+
+      <a href="https://www.youtube.com/@smantig.3media" class="btn btn-primary">SUBSCRIBE</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="Beranda"
+        style="background-image: url(./assets/images/Latar-belakang-3media.jpg)">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Selamat Datang</h1>
+
+            <p class="hero-text">
+              Kami dengan bangga mempersembahkan platform resmi 3MEDIA SMANTIG, ruang kreatif yang dirancang untuk mempertemukan informasi, inspirasi, dan kebersamaan. Di sini, kalian bisa menemukan visi, misi, serta tujuan kami yang menjadi landasan dalam setiap langkah. Telusuri berbagai program kerja unggulan yang kami tawarkan, mulai dari liputan acara seru hingga karya-karya digital terbaik. Jangan lupa juga untuk mengenal lebih dekat anggota tim kreatif kami yang berdedikasi untuk mewujudkan setiap ide menjadi nyata. Kami percaya bahwa melalui kolaborasi, inovasi, dan semangat tanpa batas, kita bisa menciptakan sesuatu yang luar biasa. Terima kasih telah menjadi bagian dari perjalanan ini, dan selamat menjelajahi.
+            </p>
+
+            <div class="btn-wrapper">
+
+              <a href="#project-label" class="btn btn-primary">Jelajahi Sekarang</a>
+
+              <a href="#program kerja" class="btn btn-outline">Program Kerja</a>
+
+            </div>
+
+          </div>
+
+          <div class="hero-slider" data-slider>
+
+            <div class="slider-inner">
+              <ul class="slider-container" data-slider-container>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/Logo 3MEDIA terbaru.jpg" width="575" height="550" alt="Foto Logo 3media" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <div class="hero-card">
+                    <figure class="img-holder" style="--width: 575; --height: 550;">
+                      <img src="./assets/images/Foto Bersama 3MEDIA.jpg" width="575" height="550" alt="Foto Bersamaa"
+                        class="img-cover">
+                    </figure>
+
+                    <button class="play-btn" aria-label="play adex intro">
+                      <ion-icon name="play" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/Logo 3MEDIA terbaru.jpg" width="575" height="550" alt="Foto Logo 3media" class="img-cover">
+                  </figure>
+
+                </li>
+
+              </ul>
+            </div>
+
+           
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+
+      <section class="section project" aria-labelledby="project-label" id="berita">
+        <div class="container">
+
+          <p class="section-subtitle" id="project-label">3MEDIA SMANTIG</p>
+
+          <h2 class="h2 section-title">
+            Tentang Kami
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;" id="visi">
+                  <img src="./assets/images/Logo 3MEDIA terbaru.jpg" width="560" height="350" loading="lazy"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="Tentang Kami.html" class="card-title">Visi</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Menciptakan siswa yang memiliki ilmu pengetahuan dan keterampilan di bidang teknologi, dan menjadikan 3media sebagai wadah kreativitas serta inovasi dalam ilmu teknologi.
+                  </p>
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/Logo 3MEDIA terbaru.jpg" width="560" height="350" loading="lazy"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="Tentang Kami.html" class="card-title">Misi</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Membekali setiap siswa dengan keterampilan, pengetahuan, dan sikap agar kompeten dalam bidang seni berbasis teknologi multimedia. Mengembangkan literasi dan wawasan digital sebagai generasi cakap digital, mengasah soft skill setiap siswa, dan menjalin kerja sama dengan organisasi sekolah.
+                  </p>
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/Logo 3MEDIA terbaru.jpg" width="560" height="350" loading="lazy"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="Tentang Kami.html" class="card-title">Tujuan</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Tujuan di dirikannya 3 Media yaitu menjadi tempat untuk mengembangkan bakat dan hobi yang dimiliki siswa, dan dengan adanya 3 Media diharapkan dapat mewadahi miant dan potensi siswa serta dapat membantu Hubungan Masyarakat dalam mendokumentasi setiap acara sekolah sean menyajiakan bertia/informasi tentang SMA Negeri 3 Gorontalo
+                  </p>
+
+                 
+
+                </div>
+
+              </div>
+            </li>
+          </section>
+          <section class="section project" aria-labelledby="project-label" id="program kerja">
+            <div class="container">
+    
+              <h2 class="h2 section-title">
+                Program Kerja
+              </h2>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Program Kerja</th>
+                  <th>Divisi</th>
+                  <th colspan="12">Target Pelaksanaan</th>
+                  <th>Keterangan</th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th>10</th>
+                  <th>11</th>
+                  <th>12</th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>4</th>
+                  <th>5</th>
+                  <th>6</th>
+                  <th>7</th>
+                  <th>8</th>
+                  <th>Dst</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="section-header">
+                  <td colspan="16">Jangka Pendek</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Pembentukan Tim Produksi</td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Melakukan sosialisasi bahaya hoax dan cara mencegahnya</td>
+                  <td>FOTO & EDITING</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td> 
+              </tr>
+              <tr></tr>
+                  <td>3</td>
+                  <td> Membuat video profil 3media</td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>4</td>
+                  <td>Membenahi ruangan baru</td>
+                  <td>3MEDIA</td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>5</td>
+                  <td>Pelatihan bagi setiap divisi</td>
+                  <td>PJ DIVISI</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+                <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+              </tbody>
+              <tbody>
+                <tr class="section-header">
+                  <td colspan="16">Jangka Menengah</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Berkolaborasi bersama multimedia dari sekolah lain</td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>Memperingati hari-hari besar</td>
+                  <td>DESAIN</td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>8</td>
+                  <td>Mendokumentasikan acara sekolah</td>
+                  <td>FOTO & EDITING</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>9</td>
+                  <td>Pembuatan dan pengupdatan website serta aplikasi</td>
+                  <td>FOTOGRAPHY</td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>10</td>
+                  <td>Mengadakan kerja bakti rutin</td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>11</td>
+                  <td>Berkolaborasi bersama perpustakaan</td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>12</td>
+                  <td>Membuat workshop di sekolah sekolah</td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+                <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+              </tbody>
+              <tbody>
+                <tr class="section-header">
+                  <td colspan="16">Jangka Panjang</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>Membuat info smantig</td>
+                  <td>DESAIN & FOTO</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr>
+                  <td>14</td>
+                  <td>Podcast bersama siswa/i, guru, dan orang penting lainnya</td>
+                  <td>FOTO & EDITING</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>15</td>
+                  <td>Membuat video edukasi </td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>16</td>
+                  <td>sosial media 3media</td>
+                  <td>DESAIN</td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>17</td>
+                  <td>berokolaborasi bersama organisasi sekolah</td>
+                  <td>3MEDIA</td>
+                  <td ></td>
+                  <td></td>
+                  <td></td>
+                  <td"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>18</td>
+                  <td>Berkolaborasi bersama hubmas smantig</td>
+                  <td>DESAIN & FOTO</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>19</td>
+                  <td>Membuat bazzar sekolah</td>
+                  <td>FOTOGRAPHY</td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td></td>
+                  <td colspan="1"></td>
+              </tr>
+              <tr></tr>
+                  <td>20</td>
+                  <td>Membuat Jasa di sekolah</td>
+                  <td>3MEDIA</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td class="highlight"></td>
+                  <td colspan="1"></td>
+              </tr>
+                <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+              </tbody>
+            </table>
+          </div>
+          
+      </section>
+      </section>
+
+
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Bergabunglah dengan Tim 3Media, tim yang berinovasi dalam dunia komunikasi.
+          </h2>
+
+          <a href="https://wa.link/6x2n5y" class="btn btn-primary">Hubungi Kami</a>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/images/Logo Smantig Infromation Center.png" width="74" height="24" alt="Adex home">
+        </a>
+
+        <p class="footer-text">
+          &copy; 2024 3media Smantig<br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/hubmas.smantig" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/smantig.3media/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/@smantig.3media" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Lokasi Kami</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            SMAN 3 GORONTALO
+          </address>
+        </li>
+
+        <li>
+          <a href="mailto:smantig.3media@gmail.com" class="footer-link">smantig.3media@gmail.com</a>
+        </li>
+
+        <li>
+          <a href="https://wa.link/cz3xpk" class="footer-link">+62 851-3627-6194</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Beranda</p>
+        </li>
+
+        <li>
+          <a href="Tentang Kami.html" class="footer-link">Tentang Kami</a>
+        </li>
+
+        <li>
+          <a href="Berita.html" class="footer-link">Berita</a>
+        </li>
+
+        <li>
+          <a href="dokumentasi.html" class="footer-link">Dokumentasi</a>
+        </li>
+
+        <li>
+          <a href="Kontak Kami.html" class="footer-link">Kontak</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="h4 footer-list-title">Motivasi</p>
+
+        <p class="footer-text">
+          "Di 3Media, kreativitas adalah kekuatan kita. Bersama, kita menciptakan, berinovasi, dan menginspirasi dunia melalui setiap konten yang kita hasilkan. Mari bergerak maju, menembus batas, dan mencapai puncak baru bersama-sama!"
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | 3MEDIA SMAN 3 GORONTALO</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+
+    <!-- Main CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2C67EC, #107bff);
+            color: #fff;
+            text-align: center;
+        }
+
+        .coming-soon-container {
+            max-width: 600px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .countdown {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        /* Add any additional styling as needed */
+    </style>
+</head>
+
+<body>
+
+    <div class="coming-soon-container">
+        <h1>Coming Soon</h1>
+        <p>Nantikan kehadiran kami 20 November 2024!!!.</p>
+        <div class="countdown" id="countdown">
+            <!-- Countdown Timer will be displayed here -->
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/hubmas.smantig"><i class="ai-facebook-fill"></i></a>
+            <a href="https://www.instagram.com/smantig.3media/"><i class="ai-instagram-fill"></i></a>
+            <a href="https://www.youtube.com/@smantig.3media"><i class="ai-youtube-fill"></i></a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer Script
+        const countdown = document.getElementById('countdown');
+        const launchDate = new Date('Nov 20, 2024 23:59:59').getTime();
+
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(interval);
+                countdown.innerHTML = "We're Live!";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
